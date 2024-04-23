@@ -1,103 +1,48 @@
-#SOLUÇÃO DO GEPETOS
+split = input().split(" ")
 
-splitas = input().split(" ")
+a_h_inicial, b_m_inicial, c_h_final, d_m_final = map(int, split)
 
-inicialH, inicialM, finalH, finalM = map(int, splitas)
+hora = 0
+minuto = 0
 
-def horasa():
-    if inicialH > finalH:
-        return 24 - abs(inicialH - finalH)
-    else:
-        return abs(finalH - inicialH)
+def minuts():
+    global hora
+    if b_m_inicial == d_m_final:
+        #aqui zerou
+        hora += 1
 
-def minutosa():
-    if inicialM <= finalM:
-        return finalM - inicialM
-    else:
-        return 60 - abs(inicialM - finalM)
+    elif b_m_inicial < d_m_final:
+        minuto = d_m_final - b_m_inicial
+        #aqui vai faltar
 
-horas = horasa()
-minutos = minutosa()
+    elif b_m_inicial > d_m_final:
+        minuto = b_m_inicial - d_m_final
+        minuto = 60 - minuto
 
-print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")
+def horas():
+    global hora
+    if a_h_inicial == c_h_final:
+        #aqui zerou
+        hora += 24
 
-# AQUI DEU CERTO
+    elif a_h_inicial < c_h_final:
+        hora += c_h_final - a_h_inicial
+        #aqui vai faltar
 
-splitas = input().split(" ")
+    elif a_h_inicial > c_h_final:
+        hora = a_h_inicial - c_h_final
 
-inicialH, inicialM, finalH, finalM = map(int, splitas)
+minuts()
+horas()
 
-horas = 0
-minutos = 0
+if hora == -1:
+    hora = 0
 
-
-def horasa():
-    global horas
-    if inicialH > finalH:
-        horas = 24 - (inicialH - finalH)
-    elif finalH > inicialH:
-        horas = finalH - inicialH
-    elif inicialH == finalH and finalM > inicialM:
-        horas = 0
-    elif inicialH == finalH and inicialM > finalM:
-        horas = 24
-
-def minutosa():
-    global minutos 
-    global horas
-
-    if inicialM < finalM:
-        minutos = finalM - inicialM    
-    elif inicialM > finalM:
-        horas -= 1
-        minutos = 60 - (inicialM - finalM)
-
-if inicialH == finalH and inicialM == finalM:
-    horas = 24
-
-horasa()
-minutosa()
-
-print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")  # splitas = input().split(" ")
-
-# inicialH, inicialM, finalH, finalM = map(int, splitas)
-
-# horas = 0
-# minutos = 0
-
-# def calculohora():
-#     global horas
-
-#     if inicialH == finalH:
-#         horas += 24
-
-#     elif inicialH > finalH:
-#         horas += 24 - inicialH - finalH
-
-#     elif finalH > inicialH:
-#         horas += finalH - inicialH  
-
-# def calcularminuto():
-#     global minutos
-#     global horas
-
-#     if inicialM == finalM:
-#         horas += 1
-#     elif inicialM > finalM:
-#         horas -= 1
-#         minutos = 59
-#     elif finalM > inicialM:
-#         minutos += finalM - inicialM
+print(f"{hora},{minuto}")
 
 
+        
 
-# calculohora()
-# calcularminuto()
-
-# if horas > 24:
-#     horas = 24
-
-# print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")
 
 
 

@@ -1,5 +1,5 @@
 #animal exercicio beecrowd
-
+#teste
 verte_inverte = input()
 
 def verte():
