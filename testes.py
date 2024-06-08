@@ -1,2 +1,6 @@
-# 6 e -5   -3, -1 = -4
-# 5, 3 e 1 = 9
+a =""
+
+for c in range(0,(len(a))-1):  
+    if a[c] == a[c+1]:
+        print("dobro")
+
