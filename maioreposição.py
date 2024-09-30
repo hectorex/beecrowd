@@ -1,7 +1,7 @@
 maiorvalors = 0
 posicao = 0
 
-for c in range(101):
+for c in range(100):
     valor = int(input())
     if valor > maiorvalors:
         maiorvalors = valor
@@ -10,4 +10,4 @@ for c in range(101):
         continue
 
 print(maiorvalors)
-print(posicao)
+print(posicao+1)
