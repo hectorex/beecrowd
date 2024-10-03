@@ -11,5 +11,5 @@ for c in range(x):
     else:
         for c in range (y+1,x):
             if c%2 != 0:
-                soma =  11
+                soma += c
     print(soma)
