@@ -1,3 +1,5 @@
+#fazeeeeeeeeeeeer
+
 split = input().split(" ")
 
 a_h_inicial, b_m_inicial, c_h_final, d_m_final = map(int, split)
@@ -39,11 +41,3 @@ if hora == -1:
     hora = 0
 
 print(f"{hora},{minuto}")
-
-
-        
-
-
-
-
-
