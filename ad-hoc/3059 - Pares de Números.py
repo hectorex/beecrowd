@@ -1,22 +1,13 @@
-#RESOLVER ----------------------------------------------
-
-
-
-
-
-
-# n,min,max = [int(x) for x in input().split()]
-# lista = [int(p) for p in input().split()]
-# pares = 0
-# for c in range(len(lista)):
-#     for item in lista:
-#         if item != lista[c]:
-#             print(f"item {item}, listac {lista[c]}, item+listac {item+lista[c]}, max {max}, min {min}")
-#             if item+lista[c] >= min and item+lista[c] <= max:
-#                 print(item+lista[c])
-#                 pares += 1
-#                 lista[c] = 0
-#         else:
-#             pass
-
-# print(pares)
+nms,mini,max = [int(x) for x in input().split()]
+nms = [int(y) for y in input().split()]
+val1 = 0
+pares = 0
+for c in range(len(nms)-1):
+    for item in nms:
+        if item != nms[val1]:
+            if item+nms[val1] >= mini and item+nms[val1] <= max:
+                pares += 1
+        else:
+            pass
+    nms.remove(nms[val1])
+print(pares)
