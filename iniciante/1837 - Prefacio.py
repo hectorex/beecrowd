@@ -1,5 +1,5 @@
-a, b = [int(x) for x in input().split()]
+a, b = map(int, input().split())
 
 rest = a%abs(b)
 
-print(f"{(a-rest)/b:.0f} {rest}")
+print(f"{(a-rest)//b} {rest}")
