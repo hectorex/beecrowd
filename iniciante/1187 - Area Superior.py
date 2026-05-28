@@ -11,8 +11,8 @@ for i in range(12):
 cont = 0
 for i, line in enumerate(matriz):
     for j, number in enumerate(line):
-        if j > 0+cont and j < 11-cont:
-            total += line[j]
+        if j > cont and j < 11-cont:
+            total += number
     cont +=1
 
 if ope == 'M':
