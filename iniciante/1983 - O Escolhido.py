@@ -7,6 +7,4 @@ for c in range(int(input())):
     if note > highnote and note >= 8:
         highnote = note
         rsp = id
-
-
 print(rsp)
