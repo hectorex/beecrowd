@@ -6,7 +6,6 @@ int main() {
 
     scanf("%c", &i);
     for (int c = 0; c < sizeof(v); c++){
-        printf("%d\n", c+1);
         if (v[c] == i){
             printf("%d\n", c+1);
             break;
