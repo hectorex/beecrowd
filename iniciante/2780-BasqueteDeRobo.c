@@ -13,6 +13,6 @@ int main() {
     else if (num <= 2000){
         pnts = 3;
     }
-    printf("%d", pnts);
+    printf("%d\n", pnts);
     return 0;
 }
