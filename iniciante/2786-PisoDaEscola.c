@@ -10,5 +10,6 @@ int main() {
 
     printf("%d\n", tipo1);
     printf("%d\n", tipo2);
+    return 0;
 }
 
